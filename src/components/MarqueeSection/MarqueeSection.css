@@ -1,0 +1,45 @@
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: white; /* Change as needed */
+  padding: 20px 0;
+  
+  /* Create blur effect at edges */
+  mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, 
+                                        rgba(255, 255, 255, 1) 15%, 
+                                        rgba(255, 255, 255, 1) 85%, 
+                                        rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, 
+                                              rgba(255, 255, 255, 1) 15%, 
+                                              rgba(255, 255, 255, 1) 85%, 
+                                              rgba(255, 255, 255, 0) 100%);
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 40px; /* Space between texts */
+  animation: marqueeScroll 100s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-content span {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #333; /* Change color as needed */
+}

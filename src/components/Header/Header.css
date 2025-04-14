@@ -1,0 +1,160 @@
+/* Header and Navbar styling */
+.navbar {
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow under navbar */
+  padding: 0.5rem 1rem; /* Add padding to navbar for spacing */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #333; /* Dark text color */
+  padding: 8px 15px; /* Add some space around the text in the links */
+  font-size: 16px; /* Adjust the font size for the links */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff; /* Change color on hover */
+  background-color: #f1f1f1; /* Subtle background change on hover */
+}
+
+/* Dropdown menu behavior */
+.nav-item.dropdown {
+  position: relative; /* Position relative for dropdown menu */
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900;
+  margin-left: 5px; /* Add space between text and arrow */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 100%;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.dropdown-menu {
+  padding: 5px 0px 5px 0px !important;
+}
+
+/* Dropdown positioning and appearance */
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position dropdown directly below the parent */
+  left: 0;
+  min-width: 100%; /* Ensure dropdown takes up full width of the parent */
+  background-color: #ffffff; /* Background color for dropdown */
+  border: 1px solid #ddd; /* Border for the dropdown */
+  border-radius: 4px; /* Rounded corners for dropdown */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for dropdown */
+  padding: 10px 0; /* Space around dropdown items */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  display: none; /* Initially hidden */
+  opacity: 100%; /* Initially hidden with 0 opacity */
+   visibility: visible; 
+}
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Lighter background on hover */
+  color: #007bff; /* Change text color on hover */
+}
+
+/* Custom styling for navbar brand (logo) */
+.navbar-brand img {
+  max-width: 120px; /* Adjust logo size */
+  height: auto;
+}
+@media (max-width: 991px) {
+  header .navbar-brand .default-logo, header .navbar-brand .alt-logo {
+      /* visibility: hidden !important; */
+      /* opacity: 0 !important; */
+      width: 126px !important;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center; /* Center the navigation links on smaller screens */
+  }
+
+  .navbar-toggler {
+    border-color: transparent; /* Hide the border of the toggler */
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    padding: 10px 15px; /* Add more space for mobile devices */
+    font-size: 18px; /* Increase font size for easier reading on small screens */
+  }
+
+  /* Adjust dropdown appearance on mobile */
+  .nav-item.dropdown .dropdown-menu {
+    position: static; /* Make dropdown stack below the parent link in mobile view */
+    box-shadow: none; /* Remove shadow for a cleaner mobile view */
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* For very small screens (mobile devices in portrait mode) */
+@media (max-width: 576px) {
+  .navbar-nav .nav-item {
+    width: 100%; /* Make each navbar item take up the full width */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 15px; /* Add padding to make the navbar links more touch-friendly */
+    font-size: 20px; /* Larger font size for easier tap targets */
+  }
+  .default-logo
+  {
+    display: flex !important;
+    width: 100px !important;
+  }
+}
+
+/* Default size for the logo */
+.default-logo {
+  max-width: 200px !important; /* Default logo size for larger screens */
+  height: auto !important;
+  display: block !important;
+}
+
+/* For medium devices like tablets */
+@media (max-width: 768px) {
+  .default-logo {
+    max-width: 150px !important; /* Scale logo down for smaller devices */
+  }
+}
+
+/* For small devices like mobile phones */
+@media (max-width: 576px) {
+  .default-logo {
+    max-width: 120px !important; /* Further scale down the logo for mobile */
+  }
+}
+
+/* For extra small devices (portrait mode or small mobile screens) */
+@media (max-width: 375px) {
+  .navbar-nav .nav-link {
+    font-size: 18px !important; /* Adjust font size for very small devices */
+  }
+
+  .default-logo {
+    max-width: 100px !important; /* Further reduce logo size for very small screens */
+  }
+}
+
+/* For large devices (laptops/desktops) */
+@media (min-width: 992px) {
+  .default-logo {
+    max-width: 200px !important; /* Full-size logo for large screens */
+  }
+  
+}

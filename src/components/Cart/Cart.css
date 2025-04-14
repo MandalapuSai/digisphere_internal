@@ -1,0 +1,51 @@
+.container {
+    justify-content: center;
+
+}
+button{
+    width: 166px;
+}
+
+
+/* Cart.css */
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: -18px;
+    padding-bottom: 25px;
+  }
+  
+  /* Input styling with error */
+  input.error {
+    border: 1px solid red;
+  }
+  
+  /* Optional: Styling for general input fields (for normal state) */
+  input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Button styling */
+  .primary_btn_Paynow1 {
+    background-color: #2d5e30;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* .primary_btn_Paynow1:hover {
+    background-color:   #2d5e30;
+  }
+   */
+  .primary_btn_1_warpper .paynow-button{
+    margin-top: -8px;
+  }

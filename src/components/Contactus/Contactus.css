@@ -1,0 +1,146 @@
+/* Banner Section */
+.banner-image {
+    max-height: 100%;
+    object-fit: cover;
+}
+.content{
+    padding-left: 70px;
+}
+
+/* Contact Details */
+.contact-box {
+    padding: 20px;
+    border-left: 5px solid #333;
+    transition: transform 0.3s ease;
+}
+.contact-box:hover {
+    transform: scale(1.02);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Background Image */
+.contact-bg-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.question-img{
+    height: 200%;
+}
+
+/* Spacing & Layout */
+.space {
+    margin-top: -27px !important;
+}
+
+/* Border Styling */
+.border-start {
+    border-left: 5px solid #333;
+    padding-left: 20px;
+}
+
+/* Text Styling */
+.text-dark-gray {
+    color: #333;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* Link Styling (remove blue color and make bold) */
+.custom-link {
+    color: black !important; /* Ensures the link color is black */
+    font-weight: bold !important; /* Makes the text bold */
+    text-decoration: none !important; /* Removes the underline */
+    display: inline-flex; /* Makes the link behave like a flex container */
+    align-items: center; /* Aligns icon and text vertically */
+}
+
+/* Add specificity to target Link and anchor tags */
+.custom-link a {
+    color: black !important; /* Ensures anchor tag inside link is black */
+    text-decoration: none !important; /* Removes the underline */
+}
+
+/* Ensures anchor tags have no default styles */
+a {
+    color: black !important; /* Forces the color to be black */
+    text-decoration: none !important; /* Removes the underline */
+}
+
+/* Location Icon Styling */
+.custom-link i {
+    margin-right: 8px; /* Adds space between the icon and the text */
+    font-size: 18px; /* Adjusts the icon size */
+}
+
+/* Optionally, add hover effects for the custom link */
+.custom-link:hover {
+    text-decoration: none !important; /* Ensures no underline on hover */
+}
+
+/* Form Input Fields Styling */
+input.form-control,
+textarea.form-control {
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Form Submit Button */
+button.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #444;
+}
+
+/* Mobile-friendly Contact Form */
+@media (max-width: 576px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .contact-bg-image {
+        min-height: 300px;
+    }
+
+    .contact-box {
+        padding: 10px;
+        border-left: none;
+        border-top: 5px solid #333;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-box {
+        text-align: center;
+        border-left: none;
+        border-top: 5px solid #333;
+    }
+
+    .border-start {
+        border-left: none;
+        border-top: 5px solid #333;
+    }
+}

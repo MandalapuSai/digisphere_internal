@@ -1,0 +1,428 @@
+/* Colors */
+:root {
+    --primary-color: #2e3992;
+    --secondary-color: #ddd0e8;
+    --accent-color: #a42793;
+}
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-icon {
+    font-size: 24px;
+    color: white;
+}
+
+/* Container */
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chatbox */
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px;
+}
+
+/* Messages */
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.bot-message {
+    background-color:#dc9cd3;
+    color: #ffffff;
+   
+    padding: 10px;
+    margin: 5px 0px 0 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+.client-message {
+    background-color:#ffe1fb;
+    color: #000000;
+    padding: 10px;
+    margin: 5px 0 0 62px;
+    border-radius: 5px;
+    align-self: flex-end;
+    font-size: 16px;
+}
+
+/* Service and Subservice Selection */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Form */
+.client-form input {
+    width: 87%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.client-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.client-form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 48%;
+}
+
+.navigation-buttons button:hover {
+    background-color: var(--accent-color);
+}
+
+.navigation-buttons button:disabled {
+    background-color: #ccc;
+}
+
+/* Start Again Button */
+.start-again-button {
+    background-color: #1c2c6c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.start-again-button:hover {
+    background-color: #1c2c6c;
+}
+
+/* Exit Button */
+.exit-button {
+    background-color: #f15363;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.exit-button:hover {
+    background-color: #c82333;
+}
+
+/* Confirmation Message */
+.thank-you-message {
+    margin-top: 20px;
+}
+
+
+.chat-header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Chatbot title */
+.chat-title {
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Close button */
+.close-btn {
+    width: 50px !important;
+    /* background-color: #c82333 !important; */
+    padding-left: 11px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn :hover {
+    background-color: var(--accent-color) !important;
+}
+
+
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+    height: 8px; /* height of the horizontal scrollbar */
+  }
+  
+  /* Style for the track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* light grey background */
+    border-radius: 10px;
+  }
+  
+  /* Style for the thumb (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #2e3992; /* custom blue color */
+    border-radius: 10px;
+  }
+  
+  /* Style for the thumb on hover (when user is hovering over it) */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #1c2c6c; /* darker shade of blue */
+  }
+
+  .loading-spinner {
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 1px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+  }
+  
+
+  .displayServices{
+    margin-left: 147px;
+    width: 164px;
+  }
+
+
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+
+
+/* Responsive Design for All Devices */
+@media screen and (max-width: 768px) {
+    /* Chat container */
+    .chat-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    /* Chatbot Icon */
+    .chatbot-icon {
+        bottom: 10px;
+        right: 10px;
+        padding: 12px;
+    }
+
+    .chat-icon {
+        font-size: 20px;
+    }
+
+    /* Messages */
+    .messages {
+        font-size: 12px;
+    }
+
+    .bot-message, .client-message {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Buttons */
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Form */
+    .client-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .client-form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .start-again-button,
+    .exit-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .navigation-buttons button {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 48%;
+    }
+
+    /* Service and Subservice Buttons */
+    .service-selection button,
+    .subservice-selection button {
+        width: 80%;
+    }
+
+    .close-btn {
+     width: 50px !important;
+        padding-left: 10px;
+        /* padding: 20px; */
+        /* background-color: #c82333; */
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    /* Adjust chat window size */
+    .chat-container {
+        width: 100%;
+        height: 90%;
+    }
+
+    .chatbox {
+        padding: 10px;
+    }
+
+    /* Chatbot Icon */
+    .chatbot-icon {
+        padding: 12px;
+    }
+
+    .chat-icon {
+        font-size: 18px;
+    }
+
+    /* Messages */
+    .messages {
+        font-size: 12px;
+    }
+
+    .bot-message, .client-message {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Form */
+    .client-form input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .client-form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .start-again-button,
+    .exit-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .navigation-buttons button {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 48%;
+    }
+
+    /* Service and Subservice Buttons */
+    .service-selection button,
+    .subservice-selection button {
+        width: 53%;
+    }
+
+    .chat-header {
+        /* padding: 1px; */
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+    }
+
+    /* Make the title font smaller for smaller screens */
+    .chat-title {
+        font-size: 16px;
+    }
+
+    /* Adjust the close button font size for mobile */
+    .close-btn {
+        width: 50px !important;
+        padding-left: 10px;
+        /* padding: 20px; */
+        /* background-color: #c82333; */
+        font-size: 18px;
+    }
+}

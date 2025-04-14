@@ -1,0 +1,118 @@
+/* Web Design Section */
+.top-space-margin {
+    margin-top: 80px;
+  }
+  
+  .fs-140 {
+    font-size: 140px;
+  }
+  
+  .xxxl-fs-100 {
+    font-size: 100px;
+  }
+  
+  .sm-fs-60 {
+    font-size: 60px;
+  }
+  
+  .fw-600 {
+    font-weight: 600;
+  }
+  
+  .text-dark-gray {
+    color: #333;
+  }
+  
+  .alt-font {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .ls-minus-8px {
+    letter-spacing: -8px;
+  }
+  
+  .sm-ls-minus-2px {
+    letter-spacing: -2px;
+  }
+  
+  .text-gradient-base-color {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .col-lg-6,
+  .col-lg-4,
+  .col-md-6,
+  .col-md-10,
+  .col-xl-5 {
+    flex: 1;
+    padding: 15px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-md-start {
+    text-align: left;
+  }
+  
+  .text-lg-start {
+    text-align: left;
+  }
+  
+  /* Images */
+  figure {
+    margin: 0;
+    position: relative;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  .border-radius-5px {
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .fs-140 {
+      font-size: 100px;
+    }
+    .xxxl-fs-100 {
+      font-size: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .fs-140 {
+      font-size: 60px;
+    }
+    .xxxl-fs-100 {
+      font-size: 50px;
+    }
+    .ls-minus-8px {
+      letter-spacing: -3px;
+    }
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

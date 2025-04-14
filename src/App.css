@@ -1,0 +1,21 @@
+.process-step-style-06 {
+    background-color: #f8f9fa; /* Light gray */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .process-step-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: white;
+    color: black;
+  }

@@ -1,0 +1,91 @@
+/* Base Styling */
+.footer-links a {
+  color: rgba(170, 170, 170, 0.733) !important;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+  color: white !important;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.mail,
+.contact {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Responsive Layout */
+@media (max-width: 991px) {
+  .footer-links .row > div {
+    margin-bottom: 30px;
+  }
+
+  .social-media {
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+
+  .footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links ul li {
+    list-style: none;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-links {
+    text-align: center;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links .row > div {
+    text-align: center !important;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links ul li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  .contact,
+  .mail {
+    font-size: 13px;
+  }
+}
