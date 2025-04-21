@@ -1,10 +1,13 @@
 import React from "react";
+import FadeUpSection from "../../components/FadeUp/FadeUp";
+import "./../../components/FadeUp/FadeUp.css"
 // import "./CustomSection.css"; // Import a separate CSS file for styles if needed
 
 const Linkstand2 = () => {
   return (
     <>
       {/* Customization Options Section */}
+      <FadeUpSection>
       <section id="down-section" className="pt-0">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -34,8 +37,9 @@ const Linkstand2 = () => {
           </div>
         </div>
       </section>
-      
+      </FadeUpSection>
       {/* Why Choose LinkStand Section */}
+      <FadeUpSection>
       <section>
         <div className="container">
           <div className="row align-items-center justify-content-center mb-7 sm-mb-40px">
@@ -64,8 +68,9 @@ const Linkstand2 = () => {
           </div>
         </div>
       </section>
-      
+      </FadeUpSection>
       {/* Testimonials Section */}
+      <FadeUpSection>
       <section id="down-section" className="pt-0">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -91,8 +96,9 @@ const Linkstand2 = () => {
           </div>
         </div>
       </section>
-      
+      </FadeUpSection>
       {/* Call to Action Section */}
+      <FadeUpSection>
       <section>
         <div className="container">
           <div className="row align-items-center justify-content-center mb-7 sm-mb-40px">
@@ -122,9 +128,9 @@ const Linkstand2 = () => {
       </section>
 
 
+      </FadeUpSection>
 
-
-
+      <FadeUpSection>
   <section id="down-section" className="pt-0">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -158,7 +164,7 @@ const Linkstand2 = () => {
 
 
 
-
+      </FadeUpSection>
     </>
   );
 };

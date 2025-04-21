@@ -46,27 +46,27 @@
                     </Link>
                     <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
                       <li>
-                        <Link className="dropdown-item" to="/digital-marketing">
+                        <Link className="dropdown-item  bi bi-megaphone text-dark-gray nav-link " to="/digital-marketing">
                           Digital Marketing
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/application-development">
+                        <Link className="dropdown-item bi bi-code-slash nav-link" to="/application-development">
                           Application Development
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/web-designing">
+                        <Link className="dropdown-item bi bi-filter-square nav-link" to="/web-designing">
                           Web Designing
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/web-development">
+                        <Link className="dropdown-item bi bi-layers  nav-link" to="/web-development">
                           Web Development
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/social-media-marketing">
+                        <Link className="dropdown-item bi bi-laptop nav-link" to="/social-media-marketing">
                           Social Media Marketing
                         </Link>
                       </li>
@@ -86,12 +86,19 @@
                       Products
                     </Link>
                     <ul className="dropdown-menu" aria-labelledby="productsDropdown">
-                      <li>
-                        <Link className="dropdown-item" to="/linkstand">
-                          LinkStand
-                        </Link>
-                      </li>
-                    </ul>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <img
+      src="assets/img/link_stand_01.jpg"
+      data-no-retina
+      alt=""
+      style={{ width: "211px", height: "45px", marginRight: "10px" }} // adjust size/margin as needed
+    />
+    <Link className="dropdown-item " to="/linkstand" style={{ margin: 0 }}>
+      LinkStand
+    </Link>
+  </li>
+</ul>
+
                   </li>
 
                   <li className="nav-item">

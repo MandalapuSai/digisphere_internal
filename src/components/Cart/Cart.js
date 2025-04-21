@@ -48,6 +48,24 @@ const Cart = () => {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.3, ease: "easeOutQuad" }
     );
+
+    gsap.fromTo(
+      ".liquid-parallax", 
+      { opacity: 0, x: -30 }, 
+      { opacity: 1, x: 0, duration: 1, delay: 0.5, ease: "easeOutQuad" }
+    );
+
+    gsap.fromTo(
+      ".title", 
+      { opacity: 0, y: 50, filter: "blur(20px)" }, 
+      { opacity: 1, y: 0, filter: "blur(0)", duration: 0.6, ease: "easeOutQuad" }
+    );
+
+    gsap.fromTo(
+      ".cart-text", 
+      { opacity: 0, x: -30 }, 
+      { opacity: 1, x: 0, duration: 0.6, delay: 0.7, ease: "easeOutQuad" }
+    );
   }, []);
 
   const validateForm = () => {
@@ -193,18 +211,19 @@ const Cart = () => {
               <h1 className="title fs-15 alt-font text-dark-gray fw-700 text-uppercase">LinkStand</h1>
             </div>
             <div className="border-start border-color-extra-medium-gray ps-40px">
-              <h2 className="text-dark-gray fw-600 alt-font">Cart</h2>
+              <h2 className="cart-text text-dark-gray fw-600 alt-font">Cart</h2>
             </div>
           </div>
 
           <div className="col-xl-8 col-lg-7 position-relative one-half-screen order-1 order-lg-2">
             <div className="overflow-hidden position-relative">
-              <img src="assets/img/cart_banner.jpg" alt="Cart Banner" className="w-100" />
+              <img src="assets/img/cart_banner.jpg" alt="Cart Banner" className="w-100 liquid-parallax" />
             </div>
           </div>
         </div>
       </div>
 
+      {/* Form content */}
       <div className="container Emailwarpper">
         {/* Form-wide Error Message */}
         {formError && <div className="form-error">{formError}</div>}
@@ -317,8 +336,8 @@ const Cart = () => {
         {errors.zip && <div className="error-message">{errors.zip}</div>}
 
         {/* Pay Now Button */}
-        <div className="primary_btn_1_warpper">
-          <button className="primary_btn_Paynow1 paynow-button" onClick={handleSubmit}>
+        <div className="primary_btn_1_warpper buttonAlign">
+          <button style={{textAlign: "center !important"}} className="primary_btn_Paynow1 paynow-button " onClick={handleSubmit}>
             Pay Now
           </button>
         </div>

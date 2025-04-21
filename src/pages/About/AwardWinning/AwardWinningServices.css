@@ -11,3 +11,8 @@
   .btn:hover {
     color: white !important;
   }
+
+  .image-success{
+    margin-top: 354px;
+    opacity: 1 !important;
+  }

@@ -17,6 +17,10 @@
     transform: scale(1.02);
 }
 
+.mt-5 {
+    margin-top: -3rem !important;
+}
+
 /* Contact Form */
 .contact-form-container {
     background-color: #f9f9f9;
@@ -31,7 +35,10 @@
     background-position: center;
     min-height: 400px;
 }
-
+/* .bg-cover{
+    width: 1px;
+    height: 1px;
+} */
 .question-img{
     height: 200%;
 }

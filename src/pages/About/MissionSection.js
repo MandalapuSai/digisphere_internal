@@ -1,7 +1,10 @@
 import React from 'react';
+import FadeUpSection from "../../components/FadeUp/FadeUp";
+import "./../../components/FadeUp/FadeUp.css"
 
 const MissionSection = () => {
   return (
+    <FadeUpSection>
     <section>
       <div className="container">
         <div className="row align-items-center justify-content-center mb-7 sm-mb-40px">
@@ -37,7 +40,7 @@ const MissionSection = () => {
       </div>
     </section>
 
-    
+    </FadeUpSection>
   );
 };
 

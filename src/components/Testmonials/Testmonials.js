@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "font-awesome/css/font-awesome.min.css";
+import useAnimationOnScroll from '../Animation/useAnimationOnScroll'; 
+import "./Testimonials.css" // Correct the path to your custom hook
 
 const Testimonials = () => {
+  const headingRef = useRef(null); // Reference for the heading
+  const swiperRef = useRef(null); // Reference for the swiper container
+
+  // Apply the animation on scroll hook to the heading and swiper container
+  useAnimationOnScroll(headingRef);
+  useAnimationOnScroll(swiperRef);
+
   return (
     <section className="pt-new position-relative">
       <div
@@ -18,7 +27,7 @@ const Testimonials = () => {
           className="row justify-content-center mb-8 lg-mb-8px"
           data-anime='{"opacity":[0,1],"duration":600,"delay":0,"staggervalue":300,"easing":"easeOutQuad"}'
         >
-          <div className="col-xl-4 col-md-5">
+          <div className="col-xl-4 col-md-5" ref={headingRef}>
             <h2 className="alt-font text-dark-gray mb-30px fw-600 ls-minus-05px">
               We are trusted by our clients
               <i className="bi bi-heart-fill d-inline-block align-top ms-10px animation-zoom icon-very-medium text-red"></i>
@@ -33,7 +42,10 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="col-xl-6 col-md-7 overflow-hidden offset-xl-2">
+          <div
+            className="col-xl-6 col-md-7 overflow-hidden offset-xl-2"
+            ref={swiperRef} // Apply ref to the swiper container
+          >
             <Swiper
               modules={[Navigation, Autoplay, Keyboard]}
               slidesPerView={1}

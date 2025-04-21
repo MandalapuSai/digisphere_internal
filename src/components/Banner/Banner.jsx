@@ -1,4 +1,5 @@
-import React from "react";
+// BannerSection.js
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
@@ -6,9 +7,44 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import anime from "animejs";
 import "./Banner.css";
 
 const BannerSection = () => {
+  const textRef = useRef(null);
+  const blockRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: textRef.current,
+            opacity: [0, 1],
+            translateY: [50, 0],
+            filter: ["blur(20px)", "blur(0px)"],
+            duration: 800,
+            easing: "easeOutQuad",
+          });
+
+          anime({
+            targets: blockRef.current.querySelectorAll(".anime-child"),
+            opacity: [0, 1],
+            translateY: [30, 0],
+            duration: 600,
+            delay: anime.stagger(200),
+            easing: "easeOutQuad",
+          });
+
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (blockRef.current) observer.observe(blockRef.current);
+  }, []);
+
   return (
     <section className="p-0 full-screen position-relative overflow-hidden">
       <div className="container-fluid p-0 h-100 position-relative">
@@ -16,20 +52,27 @@ const BannerSection = () => {
           {/* Left Content */}
           <div className="col-xl-5 col-lg-6 d-flex justify-content-center flex-column ps-10 position-relative order-2 order-lg-1">
             <div className="vertical-title-center align-items-center w-75px justify-content-center position-absolute h-auto d-none d-md-flex">
-              <div className="title fs-16 alt-font text-dark-gray fw-700 text-uppercase ls-05px">
+              <div
+                className="title fs-16 alt-font text-dark-gray fw-700 text-uppercase ls-05px mirrored-title"
+                ref={textRef}
+              >
                 Digital Growth Hub: Strategic Solutions
               </div>
             </div>
-            <div className="ps-5 ms-5 position-relative z-index-9">
-              <h1 className="text-dark-gray fw-600 alt-font ls-minus-05px">
+            <div
+              className="ps-5 ms-5 position-relative z-index-9"
+              ref={blockRef}
+            >
+              <h1 className="head text-dark-gray fw-600 alt-font ls-minus-05px anime-child">
                 Grow with Our Integrated Services.
               </h1>
-              <p className="w-75 mb-4">
-                Innovating Solutions with Real impact. We Elevate Your Business to Victory.
+              <p className="w-75 mb-4 anime-child">
+                Innovating Solutions with Real impact. We Elevate Your Business
+                to Victory.
               </p>
               <Link
                 to="/contact"
-                className="btn btn-extra-large bg-gradient-sky-blue-purple-transparent text-white"
+                className="btn btn-extra-large bg-gradient-sky-blue-purple-transparent text-white anime-child"
               >
                 Let's talk - Send a message
               </Link>
@@ -64,5 +107,6 @@ const BannerSection = () => {
     </section>
   );
 };
+
 
 export default BannerSection;

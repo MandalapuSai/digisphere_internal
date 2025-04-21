@@ -1,0 +1,89 @@
+.process-section {
+    padding: 60px 0;
+    border-top: 1px solid #ffffff; /* Matches horizontal lines */
+  }
+  
+  .process-step-box {
+    padding: 20px 10px;
+    position: relative;
+    height: 100%;
+  }
+  
+  .line-dot-container {
+    position: relative;
+    height: 25px;
+    margin-bottom: 20px;
+    width: 115%;
+  }
+  
+  .horizontal-line {
+    position: absolute;
+    top: 50%;
+    left: -71px;
+    right: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  
+  .dot-circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .inner-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #222;
+    border-radius: 50%;
+  }
+  
+  .process-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .process-description {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .process-title {
+      font-size: 18px;
+    }
+  
+    .process-description {
+      font-size: 14px;
+    }
+  
+    .dot-circle {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .inner-dot {
+      width: 6px;
+      height: 6px;
+    }
+  }
+  

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import "./AwardWinningServices.css"
+import FadeUpSection from '../../../components/FadeUp/FadeUp';
+import "../../../components/FadeUp/FadeUp.css"
 
 const AwardWinningServices = () => {
   useEffect(() => {
@@ -26,6 +28,7 @@ const AwardWinningServices = () => {
   }, []);
 
   return (
+    <FadeUpSection>
     <section className="pt-0">
       <div className="container">
         <div className="row mb-17 sm-mb-30px">
@@ -47,7 +50,7 @@ const AwardWinningServices = () => {
                 data-bottom-top="transform: translateY(20px)"
                 data-top-bottom="transform: translateY(-20px)">
                 <img style={{ width: '305px', height: '375px' }} src="assets/img/success_02.jpg" alt=""
-                  className="box-shadow-quadruple-large w-100" />
+                  className="box-shadow-quadruple-large w-100 image-success" />
               </div>
             </div>
           </div>
@@ -80,6 +83,7 @@ const AwardWinningServices = () => {
         </div>
       </div>
     </section>
+    </FadeUpSection>
   );
 };
 

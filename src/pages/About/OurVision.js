@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import FadeUpSection from "../../components/FadeUp/FadeUp";
+import "./../../components/FadeUp/FadeUp.css"
 
 const OurVision = () => {
   useEffect(() => {
@@ -24,6 +26,7 @@ const OurVision = () => {
   }, []);
 
   return (
+    <FadeUpSection>
     <section id="down-section" className="pt-0">
       <div className="container">
         <div className="row align-items-center justify-content-center" data-anime='{ " perspective": 1200 }'>
@@ -50,6 +53,7 @@ const OurVision = () => {
         </div>
       </div>
     </section>
+    </FadeUpSection>
   );
 };
 

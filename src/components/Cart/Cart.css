@@ -48,4 +48,10 @@ button{
    */
   .primary_btn_1_warpper .paynow-button{
     margin-top: -8px;
+    text-align: center !important;
+  }
+
+
+  .buttonAlign{
+text-align: center !important;
   }

@@ -1,29 +1,68 @@
-/* section {
-    opacity: 1 
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    background-color: rgba(255, 0, 0, 0.2);
-    border: 1px solid red;  
-    color: #000 !important; 
-   */
+/* Default state for section - initially hidden */
+section {
+  opacity: 0;
+  transition: opacity 5s ease-out; /* Slow fade-in effect over 2 seconds */
+  visibility: hidden; /* Initially hidden */
+  background-color: rgba(255, 0, 0, 0.2); /* Optional background color for debugging */
+  /* border: 1px solid red; Optional border for debugging */
+  color: #000 !important; /* Ensures text color is black */
+}
 
+/* When section is in view, apply the fade-in effect */
+.fadeInSection {
+  opacity: 1 !important;
+  transition: opacity s ease-out; /* Smooth fade-in with ease-out */
+  visibility: visible !important; /* Ensure the section becomes visible */
+  background-color: rgba(255, 0, 0, 0); /* Remove background color after fading in */
+  border: none; /* Remove the border after fading in */
+}
 
-  div, section, .container, .row, .col-md-12 {
-    opacity: 1 !important; /* Ensure content is visible */
+/* Styling for .services class */
+.services {
+  margin-left: -7px; /* Adjust margin */
+  margin-top: -28px; /* Adjust margin */
+  font-family: monospace; /* Apply monospace font */
+}
+
+/* Ensures that all divs, sections, containers, rows, and specific columns are visible */
+div, section, .container, .row, .col-md-12 {
+  opacity: 1 !important; /* Force visibility */
+}
+
+/* Styling for vertical counters, ensure they are inline and visible */
+.vertical-counter {
+  display: inline-flex; /* Ensures it's inline with other elements */
+  opacity: 1 !important; /* Ensure visibility */
+}
+
+/* Dark gray text styling */
+.text-dark-gray {
+  color: #333 !important; /* Make sure text is dark gray */
+}
+
+/* Styling for small icons */
+.icon-small {
+  font-size: 18px !important; /* Set icon size */
+}
+
+/* Adjust padding for top */
+.top-0 {
+  padding-top: 18px !important; /* Set top padding */
+}
+
+/* Optional: Slightly slower scroll fade-in animation */
+@keyframes smoothFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(700px); /* Optional: adds slight movement from bottom */
   }
-  .vertical-counter {
-    display: inline-flex; /* Ensures it's inline with other elements */
-    opacity: 1 !important; /* Ensure visibility */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .text-dark-gray {
-    color: #333; /* Ensure text is visible */
-  }
-  
-  .icon-small {
-    font-size: 18px; /* Make sure the icon is not too small */
-  }
-.top-0{
-    padding-top: 18px !important;
+}
+
+/* Apply smooth fade-in on scroll for sections */
+.fadeInSection {
+  animation: smoothFadeIn 2.5s ease-out forwards;
 }

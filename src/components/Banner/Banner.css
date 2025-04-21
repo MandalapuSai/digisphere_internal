@@ -1,3 +1,22 @@
+/* Modify the mirrored-title class */
+.mirrored-title {
+  display: inline-block;
+  font-size: 16px;
+  transform: rotate(0deg); /* ensure no rotation for horizontal text */
+  white-space: nowrap;
+  animation: moveUp 4s infinite ease-in-out; /* Apply custom animation */
+}
+
+.vertical-title-center .title {
+  transform: rotate(180deg) !important;
+  writing-mode: vertical-lr;
+}
+
+
+
+
+
+
 /* General Banner Section */
 .banner-container {
   width: 100%;
@@ -8,7 +27,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.head{
+  text-align: start;
+}
 .banner-content {
   width: 90%;
   max-width: 1200px;

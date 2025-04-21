@@ -1,10 +1,13 @@
 import React from "react";
+import FadeUpSection from "../../components/FadeUp/FadeUp";
+import "./../../components/FadeUp/FadeUp.css"
 // import "./Sections.css"; // Ensure you have the necessary CSS for styling
 
 const Linkstand1 = () => {
   return (
     <>
       {/* Section 1 */}
+   
       <section className="top-space-margin">
         <div className="container">
           <div className="row">
@@ -33,6 +36,7 @@ const Linkstand1 = () => {
       </section>
 
       {/* Section 2 */}
+      <FadeUpSection>
       <section id="down-section" className="pt-0">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -57,8 +61,10 @@ const Linkstand1 = () => {
           </div>
         </div>
       </section>
+      </FadeUpSection>
 
       {/* Section 3 */}
+      <FadeUpSection>
       <section>
         <div className="container">
           <div className="row align-items-center justify-content-center mb-7 sm-mb-40px">
@@ -94,11 +100,12 @@ const Linkstand1 = () => {
         </div>
       </section>
 
-
+      </FadeUpSection>
 
 
 
  {/* Section 4 */}
+ <FadeUpSection>
  <section id="down-section" className="pt-0">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -110,7 +117,7 @@ const Linkstand1 = () => {
             <div className="col-xl-5 offset-xl-1 col-lg-6 col-md-10">
               <div className="mb-10px">
                 <span className="w-25px h-1px d-inline-block bg-gradient-fast-pink-light-yellow-transparent me-5px align-middle"></span>
-                <span className="text-gradient-purple-pink fs-15 alt-font fw-700 ls-05px text-uppercase d-inline-block align-middle">Hero Section</span>
+                <span className="text-gradient-purple-pink fs-15 alt-font fw-700 ls-05px text-uppercase d-inline-block align-middle">How LinkStand Works</span>
               </div>
               <h3 className="fw-600 text-dark-gray mb-20px ls-minus-2px alt-font">
               How It Works
@@ -128,8 +135,9 @@ const Linkstand1 = () => {
           </div>
         </div>
       </section>
-
+      </FadeUpSection>
       {/* Section 5 */}
+      <FadeUpSection>
       <section>
         <div className="container">
           <div className="row align-items-center justify-content-center mb-7 sm-mb-40px">
@@ -160,7 +168,7 @@ const Linkstand1 = () => {
       </section>
 
 
-
+      </FadeUpSection>
       
     </>
   );
